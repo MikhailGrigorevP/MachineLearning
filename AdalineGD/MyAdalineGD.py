@@ -1,14 +1,7 @@
-# Обучение персептрона
-# 1. Инициализовать веса нулями или небольшими случайными числами
-# 2. Для x(i) найти y^, обновить веса
-# Wj = Wj + dWj
-# dWj = n(y(i)-y^(i)) * x(i)j, n = (0, 1)
-# Классы линейно сепарабельны
-
 import numpy as np
 
 
-class Perceptron(object):
+class AdalineGD(object):
 
     """
     Parameters
@@ -21,7 +14,7 @@ class Perceptron(object):
     ---------
     w_: np.array(1)  - weights
     /// where w_[0] - bias (vector b)
-    errors_: list  - wrong classifications
+    cost_: list  -
     """
 
     def __init__(self, eta=0.01, n_iter=50, random_state=1):
@@ -31,7 +24,7 @@ class Perceptron(object):
 
         # Fit
         self.w_ = None
-        self.errors_ = None
+        self.cost_ = None
 
     def fit(self, X, y):
 
@@ -48,19 +41,24 @@ class Perceptron(object):
 
         random_generator = np.random.RandomState(self.random_state)
         self.w_ = random_generator.normal(loc=0.0, scale=0.01, size=1 + X.shape[1])
-        self.errors_ = []
+        self.cost_ = []
 
-        for _ in range(self.n_iter):
-            errors = 0
-            for xi, target in zip(X, y):
-                update = self.eta * (target - self.predict(xi))
-                self.w_[1:] += update * xi
-                self.w_[0] += update
-                errors += int(update != 0)
-            self.errors_.append(errors)
+        for i in range(self.n_iter):
+            net_input = self.net_input(X)
+            output = self.activation(net_input)
+            errors = (y - output)
+            self.w_[1:] += self.eta * X.T.dot(errors)
+            self.w_[0] += self.eta * errors.sum()
+            cost = (errors**2).sum() / 2.0
+            self.cost_.append(cost)
 
-    def predict(self, X):
-        return np.where(self.net_input(X) >= 0.0, 1, -1)
+        return self
 
     def net_input(self, X):
         return np.dot(X, self.w_[1:]) + self.w_[0]
+
+    def activation(self, X):
+        return X
+
+    def predict(self, X):
+        return np.where(self.activation(self.net_input(X)) >= 0.0, 1, -1)
