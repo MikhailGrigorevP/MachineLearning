@@ -1,9 +1,7 @@
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from LogisticRegressionGD.MyLogisticRegressionGD import LogisticRegressionGD
-from plotDecisionRegions import plot_decision_regions
-import pandas as pd
-import numpy as np
+from Algorythms.plotDecisionRegions import plot_decision_regions
 import matplotlib.pyplot as plt
 
 iris = datasets.load_iris()

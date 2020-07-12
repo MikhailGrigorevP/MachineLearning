@@ -1,7 +1,7 @@
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
-from plotDecisionRegions import plot_decision_regions
+from Algorythms.plotDecisionRegions import plot_decision_regions
 import matplotlib.pyplot as plt
 import numpy as np
 
