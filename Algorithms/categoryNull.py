@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-from io import StringIO
-from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer

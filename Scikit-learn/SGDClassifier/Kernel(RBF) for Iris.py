@@ -2,7 +2,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
-from Algorythms.plotDecisionRegions import plot_decision_regions
+from Algorithms.plotDecisionRegions import plot_decision_regions
 import matplotlib.pyplot as plt
 import numpy as np
 

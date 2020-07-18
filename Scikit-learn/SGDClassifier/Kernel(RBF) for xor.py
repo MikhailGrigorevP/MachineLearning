@@ -1,5 +1,5 @@
 from sklearn.svm import SVC
-from Algorythms.plotDecisionRegions import plot_decision_regions
+from Algorithms.plotDecisionRegions import plot_decision_regions
 import matplotlib.pyplot as plt
 import numpy as np
 

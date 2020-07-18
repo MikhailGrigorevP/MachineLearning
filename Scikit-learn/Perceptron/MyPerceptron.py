@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Perceptron
 from sklearn.metrics import accuracy_score
-from Algorythms.plotDecisionRegions import plot_decision_regions
+from Algorithms.plotDecisionRegions import plot_decision_regions
 import matplotlib.pyplot as plt
 import numpy as np
 

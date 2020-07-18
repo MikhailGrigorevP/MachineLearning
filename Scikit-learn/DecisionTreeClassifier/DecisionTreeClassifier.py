@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import export_graphviz
 from pydotplus import graph_from_dot_data
 from sklearn.tree import DecisionTreeClassifier
-from Algorythms.plotDecisionRegions import plot_decision_regions
+from Algorithms.plotDecisionRegions import plot_decision_regions
 import matplotlib.pyplot as plt
 import numpy as np
 
