@@ -54,7 +54,7 @@ def draw_2(model, X_test, y_test):
 
     Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
     Z = Z.reshape(xx.shape)
-    
+
     plt.pcolormesh(xx, yy, Z, cmap=cmap_light)
     plt.scatter(X_test[:, 0], X_test[:, 1], c=y_test, label='Тестовые точки')
 
