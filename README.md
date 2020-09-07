@@ -6,6 +6,7 @@ _Some algorithms and implementations of Machine learning methods_
 [Source](https://stepik.org/lesson/390702/step/1?unit=379796)
 
 * [KNN](https://github.com/MikhailGrigorevP/MachineLearning/tree/master/MIPT/KNN)
+* [Linear Regression](https://github.com/MikhailGrigorevP/MachineLearning/tree/master/MIPT/LinearRegression)
 
 ## [Matplotlib learning](https://github.com/MikhailGrigorevP/MachineLearning/tree/master/Matplotlib)
 
