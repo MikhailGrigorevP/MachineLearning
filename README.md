@@ -5,6 +5,7 @@ _Some algorithms and implementations of Machine learning methods_
 ## MIPT course
 [Source](https://stepik.org/lesson/390702/step/1?unit=379796)
 
+* [Random forest, XGBoost](https://github.com/MikhailGrigorevP/MachineLearning/tree/master/MIPT/OptimalModel)
 * [KNN](https://github.com/MikhailGrigorevP/MachineLearning/tree/master/MIPT/KNN)
 * [Linear Regression](https://github.com/MikhailGrigorevP/MachineLearning/tree/master/MIPT/LinearRegression)
 
